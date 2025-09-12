@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tadeusz Przybylski – Wizytówka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      body {
+        background: url("{{ url_for('static', filename='bg-aiwithpeople.png') }}") no-repeat center center fixed;
+        background-size: cover;
+        color: #e6f8f6;
+      }
+      h1, h2, h5, h6 { color: #00e0c6; }
+      a { color: #00e0c6; }
+      a:hover { color: #00c0a6; }
+      .btn-primary {
+        background-color: #00e0c6; border-color: #00e0c6; color: #111;
+      }
+      .btn-outline-secondary {
+        border-color: #00e0c6; color: #00e0c6;
+      }
+      .btn-outline-secondary:hover {
+        background-color: #00e0c6; color: #111;
+      }
+      .section-dark {
+        background: rgba(0,0,0,0.45);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(6px);
+      }
+      footer { background: rgba(0,0,0,0.85); color: #ccc; }
+    </style>
+  </head>
+  <body class="p-3">
+    <div class="text-end mb-3">
+      <a href="/" class="me-2 fw-semibold text-decoration-none" style="color:#00e0c6;">PL</a> |
+      <a href="/en" class="ms-2 fw-semibold text-decoration-none" style="color:#00e0c6;">EN</a>
+    </div>
+    <div class="container">
+      <!-- HERO -->
+      <section class="text-center section-dark">
+        <h1 class="fw-bold">Wprowadzam zmiany w produkcji i organizacjach</h1>
+        <p class="lead">Bez teorii. Z doświadczenia — rollouty ERP/MES, transformacje operacyjne, integracja biznesu i IT.</p>
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="https://calendly.com/przybylski-tadeusz" 
+             class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-calendar-event"></i> Umów rozmowę
+          </a>
+        </div>
+      </section>
+
+      <!-- DOŚWIADCZENIE -->
+      <section class="section-dark text-center">
+        <h2 class="mb-4">Moje doświadczenie</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Rollouty ERP/MES</h5>
+            <p>Integracja biznesu, IT i produkcji</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Transformacje operacyjne</h5>
+            <p>Uruchamianie zakładów, reorganizacja procesów</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Change Management</h5>
+            <p>Przeprowadzanie ludzi przez trudne zmiany</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI / HITL -->
+      <section class="section-dark">
+        <h2 class="text-center mb-4">Pracuję ze wsparciem AI (#AIwithPeople)</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h6 class="fw-semibold">AI jako wzmacniacz decyzji</h6>
+            <p class="mb-0">Analiza przepływów, WIP i cykli; szybkie „what-if”; przygotowanie warsztatów i rekomendacji na danych.</p>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-semibold">Automatyzacje i integracje</h6>
+            <p class="mb-0">Python/Flask, REST API, SQL — łączenie ERP/MES/arkuszy, generowanie raportów i dashboardów.</p>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-semibold">Prototypy narzędzi</h6>
+            <p class="mb-0">Szybkie MVP do audytów i wdrożeń (np. kalkulatory takt/cycle, symulacje obciążenia, ekstrakcja danych).</p>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-semibold">AI with People</h6>
+            <p class="mb-0">AI wspiera ludzi — decyzje zamykamy z zespołem. Transparentnie, mierzalnie, bez „czarów”.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY ME -->
+      <section class="section-dark text-center">
+        <h2>Dlaczego ja?</h2>
+        <ul class="list-unstyled">
+          <li><strong>APP – Akademia Psychologii Przywództwa</strong> → świadome, spokojne przywództwo</li>
+          <li><strong>Versatile leadership</strong> → empatia + operacyjne dowożenie</li>
+          <li><strong>Perspektywa 360°</strong> → zarząd, produkcja, IT, wdrożenia</li>
+          <li><strong>Technologia</strong> → Python, Flask, REST API, SQL</li>
+          <li><strong>#AIwithPeople</strong> → AI wzmacnia ludzi, nie zastępuje odpowiedzialności</li>
+        </ul>
+      </section>
+
+      <!-- KONTAKT -->
+      <section id="kontakt" class="text-center section-dark">
+        <h2>Skontaktuj się</h2>
+        <p class="mb-2">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:przybylski.tadeusz@gmail.com">przybylski.tadeusz@gmail.com</a>
+        </p>
+        <p class="mb-4">
+          <i class="bi bi-linkedin"></i>
+          <a href="https://www.linkedin.com/in/tadeusz-przybylski" target="_blank">linkedin.com/in/tadeusz-przybylski</a>
+        </p>
+        <a href="https://calendly.com/przybylski-tadeusz" 
+           class="btn btn-primary btn-lg" target="_blank">
+           <i class="bi bi-calendar-event"></i> Umów rozmowę
+        </a>
+      </section>
+    </div>
+
+    <footer class="text-center p-3 mt-3">
+      <p class="mb-0">© 2025 Tadeusz Przybylski · #AIwithPeople</p>
+      <small>
+        👀 Odwiedziny (PL): {{ counters.visits_pl }}
+      </small>
+    </footer>
+  </body>
+</html>

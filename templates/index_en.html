@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tadeusz Przybylski – Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      body {
+        background: url("{{ url_for('static', filename='bg-aiwithpeople.png') }}") no-repeat center center fixed;
+        background-size: cover;
+        color: #e6f8f6;
+      }
+      h1, h2, h5, h6 { color: #00e0c6; }
+      a { color: #00e0c6; }
+      a:hover { color: #00c0a6; }
+      .btn-primary {
+        background-color: #00e0c6; border-color: #00e0c6; color: #111;
+      }
+      .btn-outline-secondary {
+        border-color: #00e0c6; color: #00e0c6;
+      }
+      .btn-outline-secondary:hover {
+        background-color: #00e0c6; color: #111;
+      }
+      .section-dark {
+        background: rgba(0,0,0,0.45);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(6px);
+      }
+      footer { background: rgba(0,0,0,0.85); color: #ccc; }
+    </style>
+  </head>
+  <body class="p-3">
+    <!-- Language switch -->
+    <div class="text-end mb-3">
+      <a href="/" class="me-2 fw-semibold text-decoration-none" style="color:#00e0c6;">PL</a> |
+      <a href="/en" class="ms-2 fw-semibold text-decoration-none" style="color:#00e0c6;">EN</a>
+    </div>
+    <div class="container">
+      <!-- HERO -->
+      <section class="text-center section-dark">
+        <h1 class="fw-bold">Driving change in manufacturing and organizations</h1>
+        <p class="lead">Not theory. From real practice — ERP/MES rollouts, operational transformations, business–IT integration.</p>
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="https://calendly.com/przybylski-tadeusz" 
+             class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-calendar-event"></i> Book a meeting
+          </a>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section-dark text-center">
+        <h2 class="mb-4">My Experience</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <h5>ERP/MES Rollouts</h5>
+            <p>Integrating business, IT, and production</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Operational Transformations</h5>
+            <p>Plant launches, process reorganization</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Change Management</h5>
+            <p>Leading people through challenging changes</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI / HITL -->
+      <section class="section-dark">
+        <h2 class="text-center mb-4">Working with AI Support (#AIwithPeople)</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h6 class="fw-semibold">AI as decision amplifier</h6>
+            <p class="mb-0">Flow analysis, WIP and cycles; quick what-if; workshop preparation and data-driven recommendations.</p>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-semibold">Automation & integration</h6>
+            <p class="mb-0">Python/Flask, REST API, SQL — connecting ERP/MES/sheets, reporting and dashboards.</p>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-semibold">Tool prototypes</h6>
+            <p class="mb-0">Quick MVPs for audits and rollouts (takt calculators, load simulations, data extraction).</p>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-semibold">Human-in-the-Loop</h6>
+            <p class="mb-0">AI supports people — final decisions are taken with the team. Transparent, measurable, no “magic”.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY ME -->
+      <section class="section-dark text-center">
+        <h2>Why me?</h2>
+        <ul class="list-unstyled">
+          <li><strong>APP – Academy of Leadership Psychology</strong> → conscious, calm leadership</li>
+          <li><strong>Versatile leadership</strong> → empathy + operational delivery</li>
+          <li><strong>360° perspective</strong> → board, production, IT, rollouts</li>
+          <li><strong>Technology</strong> → Python, Flask, REST API, SQL</li>
+          <li><strong>#AIwithPeople</strong> → AI strengthens people, doesn’t replace responsibility</li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="text-center section-dark">
+        <h2>Contact</h2>
+        <p class="mb-2">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:przybylski.tadeusz@gmail.com">przybylski.tadeusz@gmail.com</a>
+        </p>
+        <p class="mb-4">
+          <i class="bi bi-linkedin"></i>
+          <a href="https://www.linkedin.com/in/tadeusz-przybylski" target="_blank">linkedin.com/in/tadeusz-przybylski</a>
+        </p>
+        <a href="https://calendly.com/przybylski-tadeusz" 
+           class="btn btn-primary btn-lg" target="_blank">
+           <i class="bi bi-calendar-event"></i> Book a meeting
+        </a>
+      </section>
+    </div>
+
+    <footer class="text-center p-3 mt-3">
+      <p class="mb-0">© 2025 Tadeusz Przybylski · #AIwithPeople</p>
+      <small>
+        👀 Visits (EN): {{ counters.visits_en }}
+      </small>
+    </footer>
+  </body>
+</html>
