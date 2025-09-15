@@ -1,5 +1,3 @@
-import serverless_wsgi
-from app import app
-
-def handler(event, context):
-    return serverless_wsgi.handle_request(app, event, context)
+# api/index.py
+# Eksportujemy WSGI app o nazwie "app" – tego szuka Vercel.
+from app import app as app  # noqa: F401
