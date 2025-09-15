@@ -1,43 +1,29 @@
-from flask import Flask, render_template, send_from_directory
-import os
-import json, pathlib
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-# -------------------------------
-# ROUTES
-# -------------------------------
-
 @app.route("/")
 def home():
-    return render_template("index_pl.html")
+    return "Działa! 🚀 Flask na Vercel"
 
-@app.route("/en")
-def home_en():
-    return render_template("index_en.html")
+@app.route("/notes")
+def notes():
+    data = {
+        "topic": "Umiejętności Jutra - tydzień 1",
+        "points": [
+            "Podstawy AI i LLM",
+            "Prompt engineering – sztuka zadawania pytań",
+            "Metody promptowania",
+            "Narzędzia i modele (Bielik, Gemini, NotebookLM)",
+            "Research i analiza danych",
+            "Multimodalność",
+            "RAG – Retrieval Augmented Generation",
+            "Modele zamknięte vs. otwarte",
+            "Bezpieczeństwo danych",
+            "Najważniejsze pytania przy wyborze AI"
+        ]
+    }
+    return jsonify(data)
 
-# serwowanie plików statycznych (np. PDF, DOCX)
-@app.route("/static/<path:filename>")
-def static_files(filename):
-    return send_from_directory(os.path.join(app.root_path, "static"), filename)
-
-def load_counters():
-    p = pathlib.Path("counters.json")
-    if p.exists():
-        try:
-            return json.loads(p.read_text())
-        except Exception:
-            pass
-    # domyślne wartości, gdy pliku nie ma / jest uszkodzony
-    return {"pl": 0, "en": 0, "total": 0}
-
-@app.context_processor
-def inject_counters():
-    # dzięki temu w każdym szablonie jest dostępne {{ counters }}
-    return dict(counters=load_counters())
-# -------------------------------
-# ENTRYPOINT
-# -------------------------------
 if __name__ == "__main__":
-    # lokalnie odpala serwer na porcie 8000
-    app.run(debug=True, host="0.0.0.0", port=8000)
+    app.run()
